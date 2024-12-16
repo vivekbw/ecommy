@@ -1,0 +1,104 @@
+# Ruby on Rails
+*.rbc
+capybara-*.html
+.rspec
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/db/*.sqlite3-[0-9]*
+/public/system
+/coverage/
+/spec/tmp
+*.orig
+rerun.txt
+pickle-email-*.html
+
+# Ignore all logfiles and tempfiles
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# Rails secrets and environments
+config/initializers/secret_token.rb
+config/master.key
+.env
+.env.*
+!/env.example
+
+# Asset pipeline
+/public/assets
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+
+# TypeScript/JavaScript
+/app/assets/builds/*
+!/app/assets/builds/.keep
+/public/packs-test
+tsconfig.tsbuildinfo
+*.js.map
+
+# Node/npm/yarn
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# Testing
+/coverage
+.rspec_status
+/spec/reports/
+/test/tmp/
+/test/version_tmp/
+
+# IDE/Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.settings/
+.classpath
+*.sublime-workspace
+*.sublime-project
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Database dumps
+*.dump
+*.sql
+*.sqlite
+
+# Rails tmp files
+/tmp/cache/*
+/tmp/pids/*
+/tmp/sockets/*
+!/tmp/cache/.keep
+!/tmp/pids/.keep
+!/tmp/sockets/.keep
+
+# Bundler
+/.bundle
+/vendor/bundle
+
+# GraphQL
+/app/graphql/schema.graphql
+.graphqlrc.yml
