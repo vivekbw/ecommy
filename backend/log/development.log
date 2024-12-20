@@ -1807,3 +1807,88 @@ Processing by OrdersController#index as */*
 Completed 200 OK in 28ms (Views: 1.2ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/users" for 127.0.0.1 at 2024-12-17 16:10:37 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (180.1ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 213ms (Views: -19.0ms | ActiveRecord: 206.2ms (1 query, 0 cached) | GC: 2.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2024-12-17 16:10:40 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (2.4ms)[0m  [1m[34mSELECT "products".* FROM "products" /*action='index',application='Backend',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 82ms (Views: 6.5ms | ActiveRecord: 30.3ms (1 query, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2024-12-17 16:10:41 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" /*action='index',application='Backend',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 32ms (Views: 1.6ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2024-12-17 16:10:41 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" /*action='index',application='Backend',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 30ms (Views: 1.8ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2024-12-17 16:10:42 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" /*action='index',application='Backend',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 33ms (Views: 1.8ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2024-12-17 16:10:42 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" /*action='index',application='Backend',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 30ms (Views: 2.1ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2024-12-18 18:50:54 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (297.1ms)[0m  [1m[34mSELECT "products".* FROM "products" /*action='index',application='Backend',controller='products'*/[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Completed 200 OK in 340ms (Views: -110.4ms | ActiveRecord: 424.5ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2024-12-18 18:50:59 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 28ms (Views: 1.7ms | ActiveRecord: 1.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2024-12-18 18:51:02 -0500
+Processing by OrdersController#index as */*
+  [1m[36mOrder Load (2.6ms)[0m  [1m[34mSELECT "orders".* FROM "orders" /*action='index',application='Backend',controller='orders'*/[0m
+  ↳ app/controllers/orders_controller.rb:4:in `index'
+Completed 200 OK in 30ms (Views: 1.6ms | ActiveRecord: 2.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/orders" for 127.0.0.1 at 2024-12-18 18:51:26 -0500
+Processing by OrdersController#create as */*
+  Parameters: {"order"=>{"user_id"=>1, "total_price"=>100.0, "status"=>"pending"}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN /*action='create',application='Backend',controller='orders'*/[0m
+  ↳ app/controllers/orders_controller.rb:11:in `create'
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='create',application='Backend',controller='orders'*/[0m
+  ↳ app/controllers/orders_controller.rb:11:in `create'
+  [1m[36mOrder Create (5.0ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "total_price", "status", "created_at", "updated_at") VALUES (1, 100.0, 'pending', '2024-12-18 23:51:26.983450', '2024-12-18 23:51:26.983450') RETURNING "id" /*action='create',application='Backend',controller='orders'*/[0m
+  ↳ app/controllers/orders_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT /*action='create',application='Backend',controller='orders'*/[0m
+  ↳ app/controllers/orders_controller.rb:11:in `create'
+Completed 201 Created in 43ms (Views: 0.2ms | ActiveRecord: 10.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2024-12-18 18:51:30 -0500
+Processing by OrdersController#index as */*
+  [1m[36mOrder Load (2.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" /*action='index',application='Backend',controller='orders'*/[0m
+  ↳ app/controllers/orders_controller.rb:4:in `index'
+Completed 200 OK in 30ms (Views: 1.4ms | ActiveRecord: 2.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+

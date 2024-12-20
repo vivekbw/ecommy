@@ -4,7 +4,6 @@ class OrdersController < ApplicationController
     render json: @orders
   end
 
-  # POST /orders
   def create
     @order = Order.new(order_params)
 
@@ -17,7 +16,6 @@ class OrdersController < ApplicationController
 
   private
 
-  # Strong Parameters
   def order_params
     params.require(:order).permit(:user_id, :total_price, :status)
   end
