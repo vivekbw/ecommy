@@ -1,5 +1,6 @@
 # ecommy - mini ecommerce store
 
+Note: Currently a work in progress... 👷
 
 ## Goals
 Backend (Rails): Build a product catalog, user authentication, and a basic order management system.
